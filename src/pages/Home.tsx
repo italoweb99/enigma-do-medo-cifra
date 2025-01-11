@@ -23,7 +23,7 @@ const Home = () => {
     "CIFRAS - Alguns enigmas requerem decifrar códigos com alguns tipos de cifras, para isso reunimos aqui as ferramentas necessárias para isso; A descoberta de qual cifra usar faz parte que experiencia do jogo e o modo dropdown pode prejudica-la já que pode dar spoilers de quais cifras estão presentes nos enigmas se quiser ter a experiencia completa use o modo barra de pesquisa.",
     "CRIPTOGRAMAS - Use essa seção para auxiliar na descoberta da equivalência das letras do alfabeto do Enigma do Medo para o alfabeto latino. Digite os texto encontrados na seção do Samuel e será gerado uma pagina onde você poderá digitar uma letra abaixo de um símbolo e todos os símbolos correspondentes no texto serão preenchidos com a mesma letra.",
     "TRADUTOR - Essa seção traduz as letras do alfabeto de Enigma do Medo para o alfabeto latino, se você já descobriu as equivalência das letras e quer um jeito mais fácil de traduzir as mensagens ou não se importa com a experiencia de encontras use essa tela.",
-    "COLETANIA - Se você está preso em algum enigma e quer uma dica, a resposta para algum deles ou somente uma visão geral dos enigmas consulte essa seção do site."
+    "COLETÂNEA - Se você está preso em algum enigma e quer uma dica, a resposta para algum deles ou somente uma visão geral dos enigmas consulte essa seção do site."
   ];
   const imgText = "boa sorte".split('');
   const sectionsRef = useRef([]);

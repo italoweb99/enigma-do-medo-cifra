@@ -7,6 +7,7 @@ import Cifras from './pages/Cifras';
 import Test from './pages/test';
 import Home from './pages/Home'
 import Tradutor from './pages/Tradutor';
+import Coletanea from './pages/Coletanea';
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/test" element={<Test/>}/>
         <Route path="/" element={<Home/>}/>
         <Route path="/tradutor" element={<Tradutor/>}/>
+        <Route path ="/coletanea" element={<Coletanea/>}/>
       </Routes>
     </Router>
   );

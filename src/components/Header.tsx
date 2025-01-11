@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 const Header = ({index, drift =20,height = 10,marginL=400,className = ""}) => {
-    const pages = ["Home","Cifras","Criptograma","Tradutor"];
+    const pages = ["Home","Cifras","Criptograma","Tradutor","Coletânea"];
     //const drift = 20;
    // const marginL = 400;
    const params = `w-full  h-${height} ${className}`;
