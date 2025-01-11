@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.36 35.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #22c55e;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g>
+      <path class="cls-1" d="m11.11,2.26S2.91,24.66,25.92,26.56l-4.86-12.74,23.89,19.66s-3.19-22.86.56-28.86"/>
+      <polyline class="cls-1" points="39.12 21.49 23.25 1.53 2.33 23.77 43.95 23.49"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scanlines {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 4px;
+    }
+  }
+  
+  .animate-scanlines {
+    animation: scanlines 0.5s linear infinite;
+  }
+  .hidden {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  
+  .show {
+    opacity: 1;
+  }
+  
