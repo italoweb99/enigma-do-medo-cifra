@@ -1,16 +1,18 @@
 import { useNavigate } from "react-router-dom";
 
-const Header = ({index, drift =20,height = 10,marginL=400,className = ""}) => {
+const Header = ({index, drift =20,height = 10,marginLp=400,className = ""}) => {
     const pages = ["Home","Cifras","Criptograma","Tradutor","Coletânea"];
     //const drift = 20;
    // const marginL = 400;
+   const marginL = screen.width < 780 ? marginLp-200 : marginLp;
    const params = `w-full  h-${height} ${className}`;
    const hSize = ((screen.width-marginL)/pages.length);
   const cHeight = height*4;
+
    //const heightParam = `w-full h-[${height+1}px]`;
    const atPag = index-1;
    const nav = useNavigate();
-   
+
    
   const translate = (index) =>{
     return `translate(${(hSize-drift)*index},0)`
@@ -36,14 +38,14 @@ const points = setPoints(false);
            
         return(
         <>
-        <g className="group">
+        <g className="group" onClick={()=>handleClick(index)}>
         {
             
-        index != atPag ? (<polygon key = {index} points={pointsF} onClick={()=>handleClick(index)} transform={translate(index)} className=" cursor-pointer group-hover:fill-emerald-900 fill-emerald-950 stroke-green-500 stroke-2"/>):(
+        index != atPag ? (<polygon key = {index} points={pointsF}  transform={translate(index)} className=" cursor-pointer group-hover:fill-emerald-900 fill-emerald-950 stroke-green-500 stroke-2"/>):(
             <polyline key = {index} points = {points} transform = {translate(index)}className="stroke-green-500 fill-emerald-950 stroke-2"/>
         )
         }
-        <text x = {hSize/2 + marginL} key={index+pages.length} transform={translate(index)} y = {cHeight/2+5} textAnchor="middle" className="cursor-pointer fill-green-500 text-xl font-semibold">{pag}</text>
+        <text x = {hSize/2 + marginL} key={index+pages.length} transform={translate(index)} y = {cHeight/2+5} textAnchor="middle" className="cursor-pointer fill-green-500 md:text-sm xl:text-xl lg:text-md font-semibold">{pag}</text>
         <line x1="0" y1 ={cHeight} x2={marginL} y2={cHeight} key={index+(pages.length)*2} className="stroke-green-500 stroke-2"/>
         </g>
         </>
