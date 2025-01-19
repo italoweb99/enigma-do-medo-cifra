@@ -24,12 +24,17 @@ const Bacon = ({ onClose }) => {
       setText(newText);
     } else {
       setText(e);
-      const code = e.toLowerCase().split("");
+      let aux = e.toLowerCase();
+      
+      aux = aux.replaceAll('v','u');
+      aux = aux.replaceAll('j','i');
+
+      const code = aux.split("");
       let newText = '';
       code.map((char) => {
         alfaDic.map((cod, index) => {
           if (char === cod) {
-            newText = newText + morCod[index];
+            newText = newText + morCod[index]+" ";
           }
         })
       })
