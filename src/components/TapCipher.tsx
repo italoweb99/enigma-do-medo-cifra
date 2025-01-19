@@ -56,7 +56,7 @@ const TapCipher = ({onClose}) => {
             const newText = inputs.slice(0,-1);
             handleInput(newText,true);
         }else if(type=="toggle"){
-            setNum(true);
+            setNum(!isNum);
         }
         else{
             const newText = inputs + type;
@@ -70,7 +70,7 @@ const TapCipher = ({onClose}) => {
 type="text"
 value={inputs}
 name="value"
-placeholder="Escreva aqui para traduzir de Morse para texto"
+placeholder="Escreva aqui para traduzir de Tap Code para texto"
 onChange={(e)=>handleInput(e.target.value,true)}
 className={inputStyle}/>
 <div className=" flex w-full justify-center">
@@ -82,7 +82,7 @@ className={inputStyle}/>
 type="text"
 value={text}
 name="translate"
-placeholder="Escreva aqui para traduzir de texto para Morse"
+placeholder="Escreva aqui para traduzir de texto para Tap code"
 onChange={(e)=>handleInput(e.target.value,false)}
 className={inputStyle}
 />
