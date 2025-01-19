@@ -6,7 +6,7 @@ const Morse = ({onClose}) => {
     const [inputs, setInputs] = useState('')
     const [text,setText] = useState('')
     const inputStyle = "h-64 w-2/4 placeholder-emerald-700 m-4 mt-4 p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center text-3xl font-semibold bg-emerald-900 hover:bg-emerald-800bg-emerald-900 hover:bg-emerald-800"
-    const morCod = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-","-.-","...","-","..-","...-",".--","-..-","-.--","--..",".----","..---","...--","....-",".....","-....","--...","---..","----.","-----","  "];
+    const morCod = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-","-.-","...","-","..-","...-",".--","-..-","-.--","--..",".----","..---","...--","....-",".....","-....","--...","---..","----.","-----"," "];
     const alfaDic = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0"," "];
     const nav = useNavigate();
     const btnStyle = "text-center rounded hover:bg-emerald-900 text-green-500 m-2 bg-emerald-950 border-2 border-green-500"
@@ -19,7 +19,7 @@ const Morse = ({onClose}) => {
        code.map((char)=>{
         morCod.map((cod,index)=>{
             if(char==cod)
-                newText = newText + alfaDic[index]
+                newText = newText + alfaDic[index];
         })
        })
        setText(newText);
@@ -31,7 +31,7 @@ const Morse = ({onClose}) => {
         code.map((char)=>{
            alfaDic.map((cod,index)=>{
              if(char==cod){
-                newText = newText + morCod[index];
+                newText = newText + morCod[index]+" ";
              }
            } )
         })
