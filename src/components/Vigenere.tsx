@@ -7,6 +7,7 @@ const Vigenere = ({ onClose }) => {
     key: '',
     translate: ''
   });
+  const [pref,setPref] = useState("")
   const inputStyle = "placeholder-emerald-700 m-4 mt-4 p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center text-3xl font-semibold bg-emerald-900 hover:bg-emerald-800";
   const alfaDic = "abcdefghijklmnopqrstuvwxyz".split("");
   const txtTitulo = "Cifra de Vigenere (Tabula Recta)";
@@ -17,11 +18,18 @@ const Vigenere = ({ onClose }) => {
       ...inputs,
       [name]: value,
     };
-
-    if (name === 'code' || name === 'key') {
-      newInputs.translate = transformText(newInputs.code, newInputs.key, true);
-    } else if (name === 'translate' || name === 'key') {
-      newInputs.code = transformText(newInputs.translate, newInputs.key, false);
+    if(name == 'code'){
+      setPref('code');
+    }
+    else if (name == 'translate'){
+      setPref('translate')
+    }
+    
+   
+    if(pref === 'code'){
+      newInputs.translate = transformText(newInputs.code,newInputs.key,true);
+    }else if(pref === 'translate'){
+      newInputs.code = transformText(newInputs.translate,newInputs.key,false);
     }
 
     setInputs(newInputs);
