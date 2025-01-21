@@ -11,7 +11,7 @@ const Key = ({ char, onClick, className, isTranslate, isNormal }) => (
     onClick={() => onClick(char)}
     className={`bg-emerald-950 ring-green-500 ring-2 hover:ring-4 ring-offset-0 hover:bg-emerald-900  active:bg-gray-400 text-green-500 font-semibold py-2 px-1 md:px-2 rounded shadow-md m-1 transition-colors duration-200 ease-in-out ${className} flex items-center justify-center`}
   >
-    {isNormal ? char : (char === " " || char === "Enter" || char === "Backspace") ? char : isTranslate ? <img src={`/images/keys2/${char.toLowerCase()}.svg`}alt = "?" className='2xl:w-10 w-8 2xl:h-10 h-8' /> : <img src={`/images/keys/${char.toLowerCase()}.svg`} alt = "?" className='2xl:w-10 w-8 2xl:h-10 h-8' />}
+    {isNormal ? char : (char === " " || char === "Enter" || char === "Backspace") ? char : isTranslate ? <img src={`/images/keys2/${char.toLowerCase()}.svg`}alt = "?" className='2xl:w-10 w-7 2xl:h-10 h-7' /> : <img src={`/images/keys/${char.toLowerCase()}.svg`} alt = "?" className='2xl:w-10 w-7 2xl:h-10 h-7' />}
   </button>
 );
 
@@ -23,7 +23,7 @@ const Teclado = ({ isVisible, onClick, isTranslate = false }) => {
   }
 
   return (
-    <div className={`fixed bottom-0 left-0 right-0 h-2/5 p-4 bg-emerald-950 border-2 border-green-500 rounded-t-lg shadow-lg transform transition-transform duration-500 ease-in-out ${isVisible ? 'translate-y-0' : 'translate-y-full'}`}>
+    <div className={`fixed bottom-0 left-0 right-0 2xl:h-2/5  p-4 bg-emerald-950 border-2 border-green-500 rounded-t-lg shadow-lg transform transition-transform duration-500 ease-in-out ${isVisible ? 'translate-y-0' : 'translate-y-full'}`}>
       <div className='flex flex-col items-center h-full 2xl:p-2 p-1 2xl:space-y-2 space-y-1'>
         <div className='flex w-screen'>
       {isTranslate && <div className='2xl:ml-12 ml-9 float-left'><ToggleButton isChecked={handleCheck} btnColor='bg-green-500' bgColor='bg-emerald-950' bgColorChecked='green-500' outerRingColor="green-500" text = "Alternar teclado" textParams='text-green-500 font-semibold 2xl:text-lg text-md' size='2xl:h-6 2xl:w-11 h-4 w-7' ringColor='green-500' ringSize='ring-2' key={'tgBtn'}/></div>}

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Morse = ({onClose}) => {
     const [inputs, setInputs] = useState('')
     const [text,setText] = useState('')
-    const inputStyle = "2xl:h-64 h-52 w-2/4 placeholder-emerald-700 m-4 2xl:mt-4 mt-2 p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center text-3xl font-semibold bg-emerald-900 hover:bg-emerald-800bg-emerald-900 hover:bg-emerald-800"
+    const inputStyle = "2xl:h-64 h-48 w-2/4 placeholder-emerald-700 m-4 2xl:mt-4 mt-2 p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center 2xk:text-3xl text-2xl font-semibold bg-emerald-900 hover:bg-emerald-800bg-emerald-900 hover:bg-emerald-800"
     const morCod = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-","-.-","...","-","..-","...-",".--","-..-","-.--","--..",".----","..---","...--","....-",".....","-....","--...","---..","----.","-----"," "];
     const alfaDic = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0"," "];
     const nav = useNavigate();
