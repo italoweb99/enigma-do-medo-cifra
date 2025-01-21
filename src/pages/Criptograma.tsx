@@ -43,9 +43,9 @@ function MainPage() {
         </div>
         </div>
         {instructions && (
-          <p className=' p-5 md:m-12 md:mt-64 lg:m-48 lg:mt-96 xl:m-64 xl:mt-96 text-center relative font-semibold text-xl xl:text-2xl text-green-500'>Esse pagina foi cria para ajudar na tradução do alfabeto de Enigma do Medo, para utilizar clique em começar para abrir a teclado digite o codigo desejado e aperte ENTER.</p>
+          <p className=' p-5 md:m-12 md:mt-64 lg:m-48 lg:mt-96 2xl:m-64 2xl:mt-96 text-center relative font-semibold text-xl 2xl:text-2xl text-green-500'>Esse pagina foi cria para ajudar na tradução do alfabeto de Enigma do Medo, para utilizar clique em começar para abrir a teclado digite o codigo desejado e aperte ENTER.</p>
       )}
-        <div className=" xl:mb-[550px] mb-[400px]">
+        <div className=" 2xl:mb-[550px] mb-[400px]">
           <Visor chars={chars} />
         </div>
       

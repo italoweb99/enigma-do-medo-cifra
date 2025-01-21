@@ -61,14 +61,14 @@ const Vigenere = ({ onClose }) => {
 
   return (
     <div className="flex flex-col justify-center items-center bg-emerald-950 w-full h-screen">
-      <p className="text-green-500 font-semibold xl:text-xl text-lg text-left w-2/4 ">{txtTitulo.toLocaleUpperCase()}</p>
+      <p className="text-green-500 font-semibold 2xl:text-xl text-lg text-left w-2/4 ">{txtTitulo.toLocaleUpperCase()}</p>
       <input
         type="text"
         value={inputs.code}
         name="code"
         placeholder="Escreva aqui para traduzir de Vigenere para texto"
         onChange={(e) => handleInput(e)}
-        className={`xl:h-64 h-52 w-2/4 ${inputStyle}`}
+        className={`2xl:h-64 h-52 w-2/4 ${inputStyle}`}
       />
       <div className="flex  justify-left items-center w-2/4">
         <input
@@ -77,9 +77,9 @@ const Vigenere = ({ onClose }) => {
           value={inputs.key}
           placeholder="Chave"
           onChange={(e) => handleInput(e)}
-          className={`xl:h-10 h-9 w-1/2 ${inputStyle}`}
+          className={`2xl:h-10 h-9 w-1/2 ${inputStyle}`}
         />
-        <p className="text-green-500 font-semibold xl:text-xl  text-lg text-center  ">Insira a chave e o texto será traduzido automaticamente</p>
+        <p className="text-green-500 font-semibold 2xl:text-xl  text-lg text-center  ">Insira a chave e o texto será traduzido automaticamente</p>
       </div>
       <input
         type="text"
@@ -87,7 +87,7 @@ const Vigenere = ({ onClose }) => {
         name="translate"
         placeholder="Escreva aqui para traduzir de texto para Vigenere"
         onChange={(e) => handleInput(e)}
-        className={`xl:h-64 h-52 w-2/4 ${inputStyle}`}
+        className={`2xl:h-64 h-52 w-2/4 ${inputStyle}`}
       />
     </div>
   );
