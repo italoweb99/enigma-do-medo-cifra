@@ -140,7 +140,7 @@ const Home = () => {
                   texts={corpoText}
                   onComplete={() => handleEnd(1)}
                   speed={30}
-                  textClass="leading-relaxed text-justify p-20 xl:px-48 px-20 mt-6 text-green-500 xl:text-2xl texl-xl font-semibold"
+                  textClass="leading-relaxed text-justify p-20 xl:px-48 px-20 mt-6 text-green-500 xl:text-2xl text-xl font-semibold"
                   divClass="mt-6"
                 />
               ) : (
