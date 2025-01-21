@@ -10,7 +10,7 @@ const Display = ({ chars,isTranslate = false}) => (
           alt={char}
           className="w-14 h-14"
         /> ): (
-        <img src={`/images/keys2/${char.toLowerCase()}.svg`} alt = {char} className="w-14 h-14"/>)}
+        <img src={`/images/keys2/${char.toLowerCase()}.svg`} alt = {char} className="xl:w-14 w-10 xl:h-14 h-10"/>)}
         {isTranslate && <p className="text-2xl text-green-500 font-semibold m-5">{char}</p>}
         </>
          )}

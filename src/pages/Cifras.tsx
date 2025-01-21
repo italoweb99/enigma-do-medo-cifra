@@ -32,7 +32,7 @@ const Cifras = () => {
         setAviso(false);
     }
     const handleDropDown=(e)=>{
-        setMargin('mt-24');
+        setMargin('xl:mt-24 mt-20');
         setIniPag(false);
         const nCifra = cifras.map((cifra)=>{
             if(cifra.nome == e.toLocaleLowerCase()){

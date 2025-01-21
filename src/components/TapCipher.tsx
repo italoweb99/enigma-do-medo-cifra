@@ -1,17 +1,22 @@
 import {  useState } from "react";
 import { PiBackspace } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
+import Aviso from "./Aviso";
 
 const TapCipher = ({onClose}) => {
     const [inputs, setInputs] = useState('')
     const [text,setText] = useState('')
-    const inputStyle = "h-64 w-2/4 placeholder-emerald-700 m-4 mt-4 p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center text-3xl font-semibold bg-emerald-900 hover:bg-emerald-800bg-emerald-900 hover:bg-emerald-800"
+    const inputStyle = "xl:h-64 h-52 w-2/4 placeholder-emerald-700 m-4 xl:mt-4 mt-2 p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center xl:text-3xl text-xl font-semibold bg-emerald-900 hover:bg-emerald-800bg-emerald-900 hover:bg-emerald-800"
     //const morCod = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-","-.-","...","-","..-","...-",".--","-..-","-.--","--..",".----","..---","...--","....-",".....","-....","--...","---..","----.","-----","  "];
     const alfaDic = [["a","b","c","d","e"],["f","g","h","i","j"],["l","m","n","o","p"],["q","r","s","t","u"],["v","w","x","y","z"]];
     //const nav = useNavigate();
     const btnStyle = "text-center rounded hover:bg-emerald-900 text-green-500 m-2 bg-emerald-950 border-2 border-green-500"
+    const [isAviso,setAviso] = useState(true);
     const txtTitulo = "Codigo Tap (Tap Code)";
     const[isNum, setNum] = useState(false);
+    const handleClose = () => {
+        setAviso(false);
+    }
     const handleInput = (e,val) =>{
        if(val){
         setInputs(e);
@@ -65,7 +70,8 @@ const TapCipher = ({onClose}) => {
     }
     return(
 <div className="flex flex-col justify-center items-center bg-emerald-950 w-full h-screen">
-<p className="text-green-500 font-semibold text-xl text-left w-2/4 ">{txtTitulo.toLocaleUpperCase()}</p>
+{isAviso && <Aviso texto = {"A cifra de Tap Code possui algum bugs que podem fazer com que os resultados possam ser não confiaveis, tentaremos corrigir os problemas o mais rapido o possivel. Use essa cifra com cautela "} buttons={["Continuar"]} onClose = {handleClose}/>}
+<p className="text-green-500 font-semibold xl:text-xl text-lg text-left w-2/4 ">{txtTitulo.toLocaleUpperCase()}</p>
 <input
 type="text"
 value={inputs}
@@ -74,9 +80,9 @@ placeholder="Escreva aqui para traduzir de Tap Code para texto"
 onChange={(e)=>handleInput(e.target.value,true)}
 className={inputStyle}/>
 <div className=" flex w-full justify-center">
-<button className={`w-10 h-10 ${btnStyle}`} onClick={()=>clickHandle(".")}>.</button>
-<button className={`px-2 h-10${btnStyle}`} onClick={()=>clickHandle("toggle")}>Ponto/Numero</button>
-<button className={`w-10 h-10 flex flex-col justify-center items-center ${btnStyle}`} onClick={()=>clickHandle("bck")}> <PiBackspace className="text-green-500" size={24}/></button>
+<button className={`xl:w-10 w-9 xl:h-10 w-9 ${btnStyle}`} onClick={()=>clickHandle(".")}>.</button>
+<button className={`px-2 xl:h-10 h-9 ${btnStyle}`} onClick={()=>clickHandle("toggle")}>Ponto/Numero</button>
+<button className={`xl:w-10 w-9 xl:h-10 h-9 flex flex-col justify-center items-center ${btnStyle}`} onClick={()=>clickHandle("bck")}> <PiBackspace className="text-green-500" size={24}/></button>
 </div>
 <input
 type="text"
