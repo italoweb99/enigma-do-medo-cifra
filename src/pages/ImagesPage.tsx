@@ -8,7 +8,7 @@ const ImagesPage = () => {
   const location = useLocation();
   const { chars } = location.state || { chars: [] };
   const [inputs, setInputs] = useState({});
-  const size = "h-16 w-16";
+  const size = "xl:h-16 h-12 xl:w-16 w-12";
   const nav = useNavigate();
   useEffect(() => {
     const initialInputs = {};
