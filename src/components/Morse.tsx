@@ -26,7 +26,7 @@ const Morse = ({onClose}) => {
     }
     else{
         setText(e);
-        const code = e.split("");
+        const code = e.toLowerCase().split("");
         let newText = '';
         code.map((char)=>{
            alfaDic.map((cod,index)=>{
