@@ -12,7 +12,7 @@ const Home = () => {
 
   const texts = [
     `NOME: \u2588\u2588\u2588\u2588\u2588 Veríssimo \u2588\u2588\u2588\u2588\u2588\u2588\u2588`,
-    "CODENOME: Nigth Angel"
+    "CODENOME: Night Angel"
   ];
 
   const corpoText = [
