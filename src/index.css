@@ -22,4 +22,24 @@
   .show {
     opacity: 1;
   }
-  
+  ::-webkit-scrollbar {
+    width: 15px;
+    z-index: 1;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:#065F46;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #22C55E;
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4ADE80;
+}

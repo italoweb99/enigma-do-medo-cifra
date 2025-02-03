@@ -32,8 +32,8 @@ const Teclado = ({ isVisible, onClick, isTranslate = false, reset }) => {
       {isTranslate && ( 
         <div className='2xl:ml-12 ml-9 float-left flex'>
         <ToggleButton isChecked={handleCheck} btnColor='bg-green-500' bgColor='bg-emerald-950' bgColorChecked='green-500' outerRingColor="green-500" text = "Alternar teclado" textParams='text-green-500 font-semibold 2xl:text-lg text-md' size='2xl:h-6 2xl:w-11 h-4 w-7'  ringColor='green-500' ringSize='ring-2' key={'tgBtn'}/>
-        <div className='group flex'>
-        <PiArrowCounterClockwiseBold className="cursor-pointer ml-4 text-green-500 group-hover:text-green-400" size={28} onClick={()=>{reset(true)}}/>
+        <div className='group flex' onClick={()=>{reset(true)}}>
+        <PiArrowCounterClockwiseBold className="cursor-pointer ml-4 text-green-500 group-hover:text-green-400" size={28}/>
           <p className='ml-1 cursor-pointer text-green-500 font-semibold text-lg group-hover:text-green-400'>Resetar</p>
           </div>
         </div>)}

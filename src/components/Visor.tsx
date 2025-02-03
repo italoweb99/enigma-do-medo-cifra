@@ -1,5 +1,5 @@
 const Display = ({ chars,isTranslate = false}) => (
-  <div className="flex flex-wrap mt-4">
+  <div className="overflow-auto max-h-96  flex flex-wrap mt-4">
     {chars.map((char, index) => (
       <div key={index} className="flex flex-col items-center m-2 ">
         {char == " "? (<div className="w-14 h-14"></div>):
