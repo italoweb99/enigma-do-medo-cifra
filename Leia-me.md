@@ -1,0 +1,1 @@
+Para abrir o programa clique em Cifra.bat não se preocupe com os consoles somete minize e quando terminar de usar o feche.

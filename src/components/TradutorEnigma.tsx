@@ -39,7 +39,9 @@ const TradutorEnigma = ({onClose}) =>{
           <div className='flex flex-col justify-center items-center h-full w-full'>
             {isAviso && <Aviso texto = {avisoTxt} buttons={["Voltar","Continuar"]} onClose = {handleClose}/>}
             {chars.length == 0 && instructions && (
-          <p className=' p-5 mx-64 mb-24 text-center relative font-semibold text-2xl text-green-500'>Clique em começar para abrir o teclado e digite a mensagem de deseja traduzir. Clique em Alternar Teclado para alternar entre os teclados de enigma do medo e o latino.</p>
+
+          <p className=' p-5 lg:mx-48 lg:mb-24 2xl:mx-64 2xl:mb-64 md:mx-32 md:mb-12 text-center relative font-semibold text-xl 2xl:text-2xl text-green-500'>Clique em começar para abrir o teclado e digite a mensagem de deseja traduzir. Clique em Alternar Teclado para alternar entre os teclados de enigma do medo e o latino.</p>
+
       )}
 {chars.length !=0 && (<div className='mb-64'>
 <Visor isTranslate={true} chars = {chars}/>

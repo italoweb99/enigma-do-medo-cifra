@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Bacon = ({ onClose }) => {
   const [inputs, setInputs] = useState('');
   const [text, setText] = useState('');
-  const inputStyle = "xl:h-64 h-52 w-2/4 placeholder-emerald-700 m-4 xl:mt-4 m-2  p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center text-3xl font-semibold bg-emerald-900 hover:bg-emerald-800";
+  const inputStyle = "2xl:h-64 h-48 w-2/4 placeholder-emerald-700 m-4 2xl:mt-4 mt-2  p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center 2xl:text-3xl text-2xl font-semibold bg-emerald-900 hover:bg-emerald-800";
   const morCod = ["aaaaa", "aaaab", "aaaba", "aaabb", "aabaa", "aabab", "aabba", "aabbb", "abaaa", "abaab", "ababa", "ababb", "abbaa", "abbab", "abbba", "abbbb", "baaaa", "baaab", "baaba", "baabb", "babaa", "babab", "babba", "babbb", " "];
   const alfaDic = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "w", "x", "y", "z", " "];
  const txtTitulo = "Cifra de Francis Bacon (nessa cifra i/j e u/v são a mesma letra)";
@@ -54,7 +54,7 @@ const Bacon = ({ onClose }) => {
 
   return (
     <div className="flex flex-col justify-center items-center bg-emerald-950 w-full h-screen">
-      <p className="text-green-500 font-semibold xl:text-xl text-lg text-left w-2/4 ">{txtTitulo.toLocaleUpperCase()}</p>
+      <p className="text-green-500 font-semibold 2xl:text-xl text-lg text-left w-2/4 ">{txtTitulo.toLocaleUpperCase()}</p>
       <input
         type="text"
         value={inputs}
@@ -64,10 +64,10 @@ const Bacon = ({ onClose }) => {
         className={inputStyle}
       />
       <div className="flex w-full justify-center">
-        <button className={`xl:w-10 xl:h-10 w-9 h-9 ${btnStyle}`} onClick={() => clickHandle("A")}>A</button>
-        <button className={`xl:w-10 xl:h-10 w-9 h-9${btnStyle}`} onClick={() => clickHandle("B")}>B</button>
-        <button className={`w-24 xl:h-10 h-9${btnStyle}`} onClick={() => clickHandle(" ")}></button>
-        <button className={`xl:w-10 xl:h-10 h-9 w-9 flex flex-col justify-center items-center ${btnStyle}`} onClick={() => clickHandle("bck")}> <PiBackspace className="text-green-500" size={24} /></button>
+        <button className={`2xl:w-10 2xl:h-10 w-8 h-9 ${btnStyle}`} onClick={() => clickHandle("A")}>A</button>
+        <button className={`2xl:w-10 2xl:h-10 w-9 h-9${btnStyle}`} onClick={() => clickHandle("B")}>B</button>
+        <button className={`w-24 2xl:h-10 h-9${btnStyle}`} onClick={() => clickHandle(" ")}></button>
+        <button className={`2xl:w-10 2xl:h-10 h-9 w-9 flex flex-col justify-center items-center ${btnStyle}`} onClick={() => clickHandle("bck")}> <PiBackspace className="text-green-500" size={24} /></button>
       </div>
       <input
         type="text"

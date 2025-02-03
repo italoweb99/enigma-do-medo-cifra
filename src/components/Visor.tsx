@@ -8,10 +8,10 @@ const Display = ({ chars,isTranslate = false}) => (
        {!isTranslate ? (<img
           src={`/images/keys/${char.toLowerCase()}.svg`}
           alt={char}
-          className="w-14 h-14"
+          className="2xl:w-14 2xl:h-14 w-9 h-9"
         /> ): (
-        <img src={`/images/keys2/${char.toLowerCase()}.svg`} alt = {char} className="xl:w-14 w-10 xl:h-14 h-10"/>)}
-        {isTranslate && <p className="text-2xl text-green-500 font-semibold m-5">{char}</p>}
+        <img src={`/images/keys2/${char.toLowerCase()}.svg`} alt = {char} className="2xl:w-14 w-9 2xl:h-14 h-9"/>)}
+        {isTranslate && <p className="2xl:text-2xl text-xl text-green-500 font-semibold m-5">{char}</p>}
         </>
          )}
       </div>

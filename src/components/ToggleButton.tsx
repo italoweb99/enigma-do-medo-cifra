@@ -30,7 +30,7 @@ const ToggleButton = ({
         onChange={handleChecked}
       />
       <div
-        className={`relative ${bgColor} peer-checked:bg-emerald-800 ${size} after:bg-green-500 peer-focus:${outerRingColor} peer-checked:after:border-green-500 after:border-green-500 ring-${ringColor} ${ringSize} peer-focus:outline-none peer-focus:ring-4 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:border after:rounded-full xl:after:h-5 xl:after:w-5 after:h-3 after:w-3 after:transition-all dark:border-gray-600`}
+        className={`relative ${bgColor} peer-checked:bg-emerald-800 ${size} after:bg-green-500 peer-focus:${outerRingColor} peer-checked:after:border-green-500 after:border-green-500 ring-${ringColor} ${ringSize} peer-focus:outline-none peer-focus:ring-4 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:border after:rounded-full 2xl:after:h-5 2xl:after:w-5 after:h-3 after:w-3 after:transition-all dark:border-gray-600`}
       ></div>
       <span className={`ms-3 ${textParams}`}>{text}</span>
     </label>

@@ -8,7 +8,7 @@ const Vigenere = ({ onClose }) => {
     translate: ''
   });
   const [pref,setPref] = useState("")
-  const inputStyle = "placeholder-emerald-700 m-4 mt-4 p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center text-3xl font-semibold bg-emerald-900 hover:bg-emerald-800";
+  const inputStyle = "placeholder-emerald-700 m-4 2xl:mt-4 mt-2 p-1 hover:outline-green-500 hover:outline outline-2 outline-offset-2 hover:ring-0 focus:ring-0 focus:outline-green-500 focus:outline-none text-green-500 rounded text-center 2xl:text-3xl text-2xl font-semibold bg-emerald-900 hover:bg-emerald-800";
   const alfaDic = "abcdefghijklmnopqrstuvwxyz".split("");
   const txtTitulo = "Cifra de Vigenere (Tabula Recta)";
 
@@ -61,14 +61,14 @@ const Vigenere = ({ onClose }) => {
 
   return (
     <div className="flex flex-col justify-center items-center bg-emerald-950 w-full h-screen">
-      <p className="text-green-500 font-semibold xl:text-xl text-lg text-left w-2/4 ">{txtTitulo.toLocaleUpperCase()}</p>
+      <p className="text-green-500 font-semibold 2xl:text-xl text-lg text-left w-2/4 ">{txtTitulo.toLocaleUpperCase()}</p>
       <input
         type="text"
         value={inputs.code}
         name="code"
         placeholder="Escreva aqui para traduzir de Vigenere para texto"
         onChange={(e) => handleInput(e)}
-        className={`xl:h-64 h-52 w-2/4 ${inputStyle}`}
+        className={`2xl:h-64 h-48 w-2/4 ${inputStyle}`}
       />
       <div className="flex  justify-left items-center w-2/4">
         <input
@@ -77,9 +77,9 @@ const Vigenere = ({ onClose }) => {
           value={inputs.key}
           placeholder="Chave"
           onChange={(e) => handleInput(e)}
-          className={`xl:h-10 h-9 w-1/2 ${inputStyle}`}
+          className={`2xl:h-10 h-9 w-1/2 ${inputStyle}`}
         />
-        <p className="text-green-500 font-semibold xl:text-xl  text-lg text-center  ">Insira a chave e o texto será traduzido automaticamente</p>
+        <p className="text-green-500 font-semibold 2xl:text-xl  text-lg text-center  ">Insira a chave e o texto será traduzido automaticamente</p>
       </div>
       <input
         type="text"
@@ -87,7 +87,7 @@ const Vigenere = ({ onClose }) => {
         name="translate"
         placeholder="Escreva aqui para traduzir de texto para Vigenere"
         onChange={(e) => handleInput(e)}
-        className={`xl:h-64 h-52 w-2/4 ${inputStyle}`}
+        className={`2xl:h-64 h-48 w-2/4 ${inputStyle}`}
       />
     </div>
   );
