@@ -29,19 +29,26 @@ const TradutorEnigma = ({onClose}) =>{
         setInst(!instructions);
        // btnText=="Começar" ? setBtnText("Fechar"):setBtnText("Começar");
       };
+      const resetHandle = (e)=>{
+        if(e){
+          setChars([])
+        }
+      }
     return(
         <div className='bg-emerald-950 h-screen w-screen flex flex-col justify-center items-center'>
           <div className='flex flex-col justify-center items-center h-full w-full'>
             {isAviso && <Aviso texto = {avisoTxt} buttons={["Voltar","Continuar"]} onClose = {handleClose}/>}
             {chars.length == 0 && instructions && (
+
           <p className=' p-5 lg:mx-48 lg:mb-24 2xl:mx-64 2xl:mb-64 md:mx-32 md:mb-12 text-center relative font-semibold text-xl 2xl:text-2xl text-green-500'>Clique em começar para abrir o teclado e digite a mensagem de deseja traduzir. Clique em Alternar Teclado para alternar entre os teclados de enigma do medo e o latino.</p>
+
       )}
 {chars.length !=0 && (<div className='mb-64'>
 <Visor isTranslate={true} chars = {chars}/>
 </div>)}
 {instructions && <button onClick = {toggleKeyboard} className='mb-4 bg-emerald-950 hover:bg-emerald-900 border-2 border-green-500 text-green-500 font-bold py-2 px-4 rounded'>{btnText}</button>}
 </div>
-<Teclado isTranslate={true} isVisible={isKeyboardVisible} onClick={handleKeyClick}/>
+<Teclado isTranslate={true} isVisible={isKeyboardVisible} onClick={handleKeyClick} reset={resetHandle}/>
 </div>
     );
 }
