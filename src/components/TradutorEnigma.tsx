@@ -43,7 +43,7 @@ const TradutorEnigma = ({onClose}) =>{
           <p className=' p-5 lg:mx-48 lg:mb-24 2xl:mx-64 2xl:mb-64 md:mx-32 md:mb-12 text-center relative font-semibold text-xl 2xl:text-2xl text-green-500'>Clique em começar para abrir o teclado e digite a mensagem de deseja traduzir. Clique em Alternar Teclado para alternar entre os teclados de enigma do medo e o latino.</p>
 
       )}
-{chars.length !=0 && (<div className='mb-64'>
+{chars.length !=0 && (<div className='2xl:mb-64 mb-44'>
 <Visor isTranslate={true} chars = {chars}/>
 </div>)}
 {instructions && <button onClick = {toggleKeyboard} className='mb-4 bg-emerald-950 hover:bg-emerald-900 border-2 border-green-500 text-green-500 font-bold py-2 px-4 rounded'>{btnText}</button>}
