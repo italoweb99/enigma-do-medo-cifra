@@ -7,6 +7,7 @@ const Dropdown = ({ items, onChange }) => {
         onChange={e => onChange(e.target.value)}
         className="block appearance-none w-full text-xl text-green-500 bg-emerald-900  font-semibold border-none hover:outline-2 hover:outline-green-500 hover:border-green-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
       >
+        <option>Selecione uma cifra</option>
         {items.map((item, index) => (
           <option
             key={index}
